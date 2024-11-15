@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adobe Careers - UI/UX Developer Job Opening</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Simple modal styling */
+    .modal {
+      display: none; 
+      position: fixed; 
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .close {
+      float: right;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Adobe Careers</h1>
+  </header>
+  <section>
+    <h2>Join Adobe as a UI/UX Developer</h2>
+    <p>We're looking for a creative and experienced UI/UX Developer to join our team and help shape the future of digital experiences.</p>
+    <h3>Position: UI/UX Developer</h3>
+    <p>Location: Remote/On-site</p>
+    <p>Requirements:</p>
+    <ul>
+      <li>Proficiency in Adobe Creative Suite, Figma, and other design tools</li>
+      <li>Strong knowledge of HTML, CSS, and JavaScript</li>
+      <li>Excellent problem-solving skills</li>
+      <li>Portfolio showcasing UI/UX projects</li>
+    </ul>
+    <a href="skills.html" class="btn">View Required Skills</a><p></p>
+    <button onclick="openModal()" class="btn"><b>Apply for this Position</b></button>
+  </section>
+
+  <!-- Application Form Modal -->
+  <div id="applicationModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Application Form</h2>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="linkedin">LinkedIn Profile URL:</label>
+          <input type="url" id="linkedin" name="linkedin" required>
+        </div>
+        <div class="form-group">
+          <label for="resume">Upload Resume:</label>
+          <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+        </div>
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <p>Adobe Inc. &copy; 2024</p>
+  </footer>
+
+  <script>
+    // JavaScript to open and close the modal
+    function openModal() {
+      document.getElementById('applicationModal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('applicationModal').style.display = 'none';
+    }
+
+    // Close the modal when clicking outside of it
+    window.onclick = function(event) {
+      const modal = document.getElementById('applicationModal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    };
+  </script>
+</body>
+</html>
